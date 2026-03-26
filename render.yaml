@@ -19,3 +19,4 @@ databases:
   - name: tarot-db
     databaseName: tarot_bot
     user: tarot_user
+    plan: free
