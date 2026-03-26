@@ -1,0 +1,32 @@
+2026-03-26 22:59:42 | INFO     | __main__ - Initializing database...
+2026-03-26 22:59:42 | INFO     | __main__ - Database initialized
+2026-03-26 22:59:42 | INFO     | __main__ - Starting scheduler...
+2026-03-26 22:59:42 | INFO     | bot.scheduler - Scheduler started
+2026-03-26 22:59:44 | INFO     | bot.main - Starting bot: @your_tarot_bot
+2026-03-26 22:59:49 | INFO     | bot.handlers.card_day_menu - Get card day for user: 5333876901 (@Fugly_freak)
+2026-03-26 22:59:49 | INFO     | bot.services.limits - 🔍 CHECKING LIMIT: user=5333876901, type=card_day
+2026-03-26 22:59:49 | INFO     | bot.services.limits - 📅 Last reset: 2026-03-26, Today: 2026-03-26
+2026-03-26 22:59:49 | INFO     | bot.services.limits - 📊 User 5333876901 - card_day: used=0, limit=1
+2026-03-26 22:59:49 | INFO     | bot.services.limits - 📊 Full usage: {'card_day': 0, 'categories': 0}
+2026-03-26 22:59:49 | INFO     | bot.services.limits - ✏️ Setting card_day to 1
+2026-03-26 22:59:49 | INFO     | bot.services.limits - ✏️ Full usage before commit: {'card_day': 1, 'categories': 0}
+2026-03-26 22:59:49 | INFO     | bot.services.limits - ✅ Commit done
+2026-03-26 22:59:49 | INFO     | bot.services.limits - ✅ After refresh: usage={'card_day': 1, 'categories': 0}
+2026-03-26 22:59:49 | INFO     | bot.services.limits - ✅ INCREMENTED: user=5333876901, card_day now=1
+2026-03-26 22:59:51 | INFO     | bot.handlers.card_day_menu - Card sent successfully to user 5333876901
+2026-03-26 22:59:55 | INFO     | bot.handlers.card_day_menu - Get card day for user: 5333876901 (@Fugly_freak)
+2026-03-26 22:59:55 | INFO     | bot.services.limits - 🔍 CHECKING LIMIT: user=5333876901, type=card_day
+2026-03-26 22:59:55 | INFO     | bot.services.limits - 📅 Last reset: 2026-03-26, Today: 2026-03-26
+2026-03-26 22:59:55 | INFO     | bot.services.limits - 📊 User 5333876901 - card_day: used=1, limit=1
+2026-03-26 22:59:55 | INFO     | bot.services.limits - 📊 Full usage: {'card_day': 1, 'categories': 0}
+2026-03-26 22:59:55 | WARNING  | bot.services.limits - ❌ LIMIT EXCEEDED: user=5333876901, used=1, limit=1
+2026-03-26 23:00:00 | INFO     | bot.scheduler - Sending daily cards...
+2026-03-26 23:00:04 | INFO     | bot.services.limits - 🔍 CHECKING LIMIT: user=5333876901, type=spread
+2026-03-26 23:00:04 | INFO     | bot.services.limits - 📅 Last reset: 2026-03-26, Today: 2026-03-26
+2026-03-26 23:00:04 | INFO     | bot.services.limits - 📊 User 5333876901 - spread: used=0, limit=999
+2026-03-26 23:00:04 | INFO     | bot.services.limits - 📊 Full usage: {'card_day': 1, 'categories': 0}
+2026-03-26 23:00:04 | INFO     | bot.services.limits - ✏️ Setting spread to 1
+2026-03-26 23:00:04 | INFO     | bot.services.limits - ✏️ Full usage before commit: {'card_day': 1, 'categories': 0, 'spread': 1}
+2026-03-26 23:00:04 | INFO     | bot.services.limits - ✅ Commit done
+2026-03-26 23:00:04 | INFO     | bot.services.limits - ✅ After refresh: usage={'card_day': 1, 'categories': 0, 'spread': 1}
+2026-03-26 23:00:04 | INFO     | bot.services.limits - ✅ INCREMENTED: user=5333876901, spread now=1

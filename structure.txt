@@ -1,0 +1,230 @@
+Folder PATH listing for volume Windows
+Volume serial number is 0813-E620
+C:.
+|   .env
+|   .gitignore
+|   requirements.txt
+|   run.py
+|   structure.txt
+|   
++---bot
+|   |   config.py
+|   |   main.py
+|   |   scenarios.py
+|   |   scheduler.py
+|   |   __init__.py
+|   |   
+|   +---core
+|   |   |   cards_data.py
+|   |   |   card_texts.py
+|   |   |   deck.py
+|   |   |   spread_renderer.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           cards_data.cpython-311.pyc
+|   |           cards_data.cpython-313.pyc
+|   |           card_texts.cpython-313.pyc
+|   |           deck.cpython-311.pyc
+|   |           deck.cpython-313.pyc
+|   |           spreads_data.cpython-311.pyc
+|   |           spreads_data.cpython-313.pyc
+|   |           spread_renderer.cpython-313.pyc
+|   |           text_generator.cpython-311.pyc
+|   |           text_generator.cpython-313.pyc
+|   |           __init__.cpython-311.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---db
+|   |   |   database.py
+|   |   |   models.py
+|   |   |   queries.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           database.cpython-311.pyc
+|   |           database.cpython-313.pyc
+|   |           models.cpython-311.pyc
+|   |           models.cpython-313.pyc
+|   |           queries.cpython-311.pyc
+|   |           queries.cpython-313.pyc
+|   |           __init__.cpython-311.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---handlers
+|   |   |   card_day.py
+|   |   |   categories.py
+|   |   |   category_spreads.py
+|   |   |   help.py
+|   |   |   meanings.py
+|   |   |   settings.py
+|   |   |   start.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           card_day.cpython-311.pyc
+|   |           card_day.cpython-313.pyc
+|   |           category_spreads.cpython-313.pyc
+|   |           help.cpython-313.pyc
+|   |           meanings.cpython-313.pyc
+|   |           settings.cpython-313.pyc
+|   |           spreads.cpython-313.pyc
+|   |           start.cpython-311.pyc
+|   |           start.cpython-313.pyc
+|   |           __init__.cpython-311.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---keyboards
+|   |   |   after_spread.py
+|   |   |   categories.py
+|   |   |   category_menu.py
+|   |   |   main.py
+|   |   |   meanings.py
+|   |   |   settings.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           after_spread.cpython-311.pyc
+|   |           after_spread.cpython-313.pyc
+|   |           category_menu.cpython-313.pyc
+|   |           main.cpython-311.pyc
+|   |           main.cpython-313.pyc
+|   |           meanings.cpython-311.pyc
+|   |           meanings.cpython-313.pyc
+|   |           settings.cpython-311.pyc
+|   |           settings.cpython-313.pyc
+|   |           spreads.cpython-311.pyc
+|   |           spreads.cpython-313.pyc
+|   |           __init__.cpython-311.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   +---services
+|   |   |   groq.py
+|   |   |   limits.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           limits.cpython-313.pyc
+|   |           morph.cpython-311.pyc
+|   |           morph.cpython-313.pyc
+|   |           
+|   +---static
+|   |   +---backgrounds
+|   |   +---fonts
+|   |   |       opensans.ttf
+|   |   |       playfair.ttf
+|   |   |       
+|   |   \---tarot_cards
+|   |           00_fool.jpg
+|   |           01_magician.jpg
+|   |           02_high_priestess.jpg
+|   |           03_empress.jpg
+|   |           04_emperor.jpg
+|   |           05_hierophant.jpg
+|   |           06_lovers.jpg
+|   |           07_chariot.jpg
+|   |           08_strength.jpg
+|   |           09_hermit.jpg
+|   |           10_wheel_of_fortune.jpg
+|   |           11_justice.jpg
+|   |           12_hanged_man.jpg
+|   |           13_death.jpg
+|   |           14_temperance.jpg
+|   |           15_devil.jpg
+|   |           16_tower.jpg
+|   |           17_star.jpg
+|   |           18_moon.jpg
+|   |           19_sun.jpg
+|   |           20_judgement.jpg
+|   |           21_world.jpg
+|   |           cups_01_ace.jpg
+|   |           cups_02.jpg
+|   |           cups_03.jpg
+|   |           cups_04.jpg
+|   |           cups_05.jpg
+|   |           cups_06.jpg
+|   |           cups_07.jpg
+|   |           cups_08.jpg
+|   |           cups_09.jpg
+|   |           cups_10.jpg
+|   |           cups_king.jpg
+|   |           cups_knight.jpg
+|   |           cups_page.jpg
+|   |           cups_queen.jpg
+|   |           pentacles_01_ace.jpg
+|   |           pentacles_02.jpg
+|   |           pentacles_03.jpg
+|   |           pentacles_04.jpg
+|   |           pentacles_05.jpg
+|   |           pentacles_06.jpg
+|   |           pentacles_07.jpg
+|   |           pentacles_08.jpg
+|   |           pentacles_09.jpg
+|   |           pentacles_10.jpg
+|   |           pentacles_king.jpg
+|   |           pentacles_knight.jpg
+|   |           pentacles_page.jpg
+|   |           pentacles_queen.jpg
+|   |           swords_01_ace.jpg
+|   |           swords_02.jpg
+|   |           swords_03.jpg
+|   |           swords_04.jpg
+|   |           swords_05.jpg
+|   |           swords_06.jpg
+|   |           swords_07.jpg
+|   |           swords_08.jpg
+|   |           swords_09.jpg
+|   |           swords_10.jpg
+|   |           swords_king.jpg
+|   |           swords_knight.jpg
+|   |           swords_page.jpg
+|   |           swords_queen.jpg
+|   |           wands_01_ace.jpg
+|   |           wands_02.jpg
+|   |           wands_03.jpg
+|   |           wands_04.jpg
+|   |           wands_05.jpg
+|   |           wands_06.jpg
+|   |           wands_07.jpg
+|   |           wands_08.jpg
+|   |           wands_09.jpg
+|   |           wands_10.jpg
+|   |           wands_king.jpg
+|   |           wands_knight.jpg
+|   |           wands_page.jpg
+|   |           wands_queen.jpg
+|   |           
+|   +---utils
+|   |   |   helpers.py
+|   |   |   logger.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           helpers.cpython-311.pyc
+|   |           helpers.cpython-313.pyc
+|   |           logger.cpython-311.pyc
+|   |           logger.cpython-313.pyc
+|   |           __init__.cpython-311.pyc
+|   |           __init__.cpython-313.pyc
+|   |           
+|   \---__pycache__
+|           config.cpython-311.pyc
+|           config.cpython-313.pyc
+|           main.cpython-311.pyc
+|           main.cpython-313.pyc
+|           scenarios.cpython-313.pyc
+|           __init__.cpython-311.pyc
+|           __init__.cpython-313.pyc
+|           
++---data
+|       bot.log
+|       tarot_bot.db
+|       
+\---temp
+        spread_career_square_1774443805.png
+        spread_celtic_cross_1774458757.png
+        spread_five_star_1774441975.png
+        spread_five_star_1774443902.png
+        spread_goal_setting_1774442683.png
+        spread_month_horseshoe_1774443853.png
+        
