@@ -4,11 +4,14 @@ from contextlib import asynccontextmanager
 
 from bot.config import settings
 
-# Async engine
+# Создаем engine с правильными настройками для PostgreSQL
 engine = create_async_engine(
     settings.DATABASE_URL,
     echo=False,
-    future=True
+    future=True,
+    pool_pre_ping=True,  # Проверка соединения перед использованием
+    pool_size=5,          # Размер пула соединений
+    max_overflow=10,      # Максимальное переполнение
 )
 
 # Session factory
