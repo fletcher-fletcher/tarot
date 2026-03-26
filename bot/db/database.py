@@ -4,15 +4,25 @@ from contextlib import asynccontextmanager
 
 from bot.config import settings
 
-# Создаем engine с правильными настройками для PostgreSQL
-engine = create_async_engine(
-    settings.DATABASE_URL,
-    echo=False,
-    future=True,
-    pool_pre_ping=True,  # Проверка соединения перед использованием
-    pool_size=5,          # Размер пула соединений
-    max_overflow=10,      # Максимальное переполнение
-)
+# Создаем engine с разными настройками в зависимости от типа БД
+if "sqlite" in settings.DATABASE_URL:
+    # SQLite не поддерживает pool_size и max_overflow
+    engine = create_async_engine(
+        settings.DATABASE_URL,
+        echo=False,
+        future=True,
+        connect_args={"check_same_thread": False}  # Для SQLite
+    )
+else:
+    # PostgreSQL с пулом соединений
+    engine = create_async_engine(
+        settings.DATABASE_URL,
+        echo=False,
+        future=True,
+        pool_pre_ping=True,
+        pool_size=5,
+        max_overflow=10
+    )
 
 # Session factory
 async_session_maker = async_sessionmaker(
