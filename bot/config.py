@@ -1,7 +1,9 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import sys
 
+# Загружаем .env файл
 load_dotenv()
 
 
@@ -10,11 +12,33 @@ class Settings:
     BOT_TOKEN = os.getenv("BOT_TOKEN")
     BOT_USERNAME = os.getenv("BOT_USERNAME", "tarot_bot")
     
-    # Database
-    DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./data/tarot_bot.db")
+    # Проверка наличия токена
+    if not BOT_TOKEN:
+        raise ValueError("BOT_TOKEN is not set in environment variables")
     
     # Groq
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+    
+    # База данных - поддержка PostgreSQL и SQLite
+    DATABASE_URL = os.getenv("DATABASE_URL")
+    
+    # Если DATABASE_URL не задан, используем SQLite для локальной разработки
+    if not DATABASE_URL:
+        # Для локальной разработки
+        BASE_DIR = Path(__file__).parent.parent
+        DATA_DIR = BASE_DIR / "data"
+        DATA_DIR.mkdir(exist_ok=True)
+        DATABASE_URL = f"sqlite+aiosqlite:///{DATA_DIR}/tarot_bot.db"
+    else:
+        # Конвертируем postgres:// в postgresql:// для SQLAlchemy
+        if DATABASE_URL.startswith("postgres://"):
+            DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+        
+        # Добавляем asyncpg драйвер если используется PostgreSQL
+        if DATABASE_URL.startswith("postgresql://") and "asyncpg" not in DATABASE_URL:
+            # Если URL без драйвера, добавляем asyncpg
+            if "+" not in DATABASE_URL.split("://")[1].split("/")[0]:
+                DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://", 1)
     
     # Paths
     BASE_DIR = Path(__file__).parent.parent
