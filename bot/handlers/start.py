@@ -59,4 +59,10 @@ async def back_to_main_callback(callback: CallbackQuery):
         parse_mode="HTML"
     )
     await callback.answer()
+
+@router.message(Command("cancel"))
+async def cancel_command(message: Message, state: FSMContext):
+    """Cancel current operation"""
+    await state.clear()
+    await message.answer("❌ Действие отменено.")
     
