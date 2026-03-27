@@ -3,6 +3,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from loguru import logger
+from bot.handlers.admin import router as admin_router
 
 from bot.config import settings
 from bot.handlers import (
@@ -26,6 +27,7 @@ dp.include_router(start_router)
 dp.include_router(card_day_menu_router)
 dp.include_router(categories_router)
 dp.include_router(settings_router)
+dp.include_router(admin_router)
 
 
 async def main():
