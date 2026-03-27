@@ -24,6 +24,12 @@ async def send_daily_card():
     async with get_session() as session:
         users = await get_all_users_with_notifications(session)
         
+        if not users:
+            # Не логируем если нет пользователей
+            return
+        
+        logger.info(f"Sending daily cards to {len(users)} users...")
+        
         for user in users:
             try:
                 # Get user's time
